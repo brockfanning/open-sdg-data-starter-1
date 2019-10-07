@@ -3,11 +3,19 @@ import sdg
 import glob
 import json
 import lxml.etree as ET
+import pandas as pd
 
-def json2mapping(file):
-    with open(file, 'r') as fp:
-        mapping = json.load(fp)
-    return mapping
+def csv2mapping(csv):
+    df=pd.read_csv(csv)
+    data={}
+    for index, row in df.iterrows():
+        if "," in row["IndicatorCode"]:
+            row["IndicatorCode"]=row["IndicatorCode"].split(",")
+        if "," not in json.dumps(row[1]):
+            data[row[0]]=json.dumps(row[1]).replace('"','')
+        else:
+            data[row[0]]=row[1]
+    return data
 
 def get_file_type(file):
     file_type=ET.parse(file).getroot().tag.split('}')[1]
@@ -32,7 +40,7 @@ dsd = os.path.join('SDG_DSD.KG.xml')
 # series code. This is used to map series codes to indicator ids.
 indicator_id_xpath = ".//Name"
 indicator_name_xpath = ".//Name"
-indicator_id_map = json2mapping('code_mapping.json')
+indicator_id_map = csv2mapping('code_mapping.csv')
 
 
 # Read all the files.

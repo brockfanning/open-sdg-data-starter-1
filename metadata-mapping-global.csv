@@ -1,0 +1,40 @@
+Цель,SDG_GOAL
+Задача,SDG_TARGET
+Индикатор,SDG_INDICATOR
+Организация,ORGANISATION_UNIT
+Контактное лицо (лица) / Координатор,CONTACT_NAME
+Электронная почта контактного лица,CONTACT_EMAIL
+Телефон контактного лица,CONTACT_PHONE
+Сайт организации (если есть),organization_website
+Определение,STAT_CONC_DEF
+Основные понятия:,concepts
+Обоснование и толкование,RATIONALE
+Источники данных,SOURCE_TYPE
+Методы сбора данных,COMPILING_ORG
+Метод расчета:,DATA_COMP
+Комментарий и ограничения:,REC_USE_LIM
+Гарантия качества:,QUALITY_ASSURE
+Доступность данных и пробелы:,COVERAGE
+Разбивка:,disaggregation
+7. Сопоставимость с международными данными / стандартами,COMPARABILITY
+8. Ссылки и документация,OTHER_DOC
+Goal,SDG_GOAL
+Target,SDG_TARGET
+Indicator,SDG_INDICATOR
+Organization,ORGANISATION_UNIT
+Contact person(s)/Focal point,CONTACT_NAME
+Contact person's email,CONTACT_EMAIL
+Contact person's phone,CONTACT_PHONE
+Organization website (if available),organization_website
+Definitions,STAT_CONC_DEF
+Concepts,concepts
+Rationale and interpretation,RATIONALE
+Data sources,SOURCE_TYPE
+Data collection methods,COLL_METHOD
+Method of computation,DATA_COMP
+Comments and limitations,REC_USE_LIM
+Quality assurance,QUALITY_ASSURE
+Data availability and gaps,COVERAGE
+Disaggregation,disaggregation
+7. Comparability with international data/standards,COMPARABILITY
+8. References and documentation,OTHER_DOC

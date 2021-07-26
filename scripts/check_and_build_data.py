@@ -21,5 +21,7 @@ validation_successful = open_sdg_check(config=config, alter_data=alter_data, alt
 # If everything was valid, perform the build.
 if validation_successful:
     open_sdg_build(config=config, alter_data=alter_data, alter_meta=alter_meta)
+    # Also generate a global build for compatibility with SDG Lab.
+    open_sdg_build(config='open_sdg_config_sdmx_global.yml')
 else:
     raise Exception('There were validation errors. See output above.')

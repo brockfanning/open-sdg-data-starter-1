@@ -1,0 +1,30 @@
+languages:
+  - en
+
+src_dir: ''
+
+inputs:
+  - class: InputSdmxMl_Multiple
+    path_pattern: data/*.xml
+    dsd: SDG_DSD.KG.xml
+    import_codes: true
+    drop_singleton_dimensions: false
+  - class: InputExcelMeta
+    path_pattern: meta/*-*.xlsx
+    metadata_mapping: 'metadata-mapping-global.csv'
+
+translations:
+  - class: TranslationInputSdmx
+    source: SDG_DSD.KG.xml
+
+site_dir: _site/global
+
+schema_file: _prose.yml
+
+reporting_status_extra_fields: []
+
+sdmx_output_global:
+  meta_reporting_type: N
+  meta_ref_area: KG
+  default_values:
+    REF_AREA: KG

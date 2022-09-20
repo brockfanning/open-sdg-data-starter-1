@@ -23,10 +23,14 @@ inputs:
     path_pattern: data/*.xml
     dimension_map:
       REF_AREA|KG: ''
-    drop_dimensions: 
+    drop_dimensions:
       - SOURCE_DETAIL
+      - FREQ
+      - NATURE
+      - REPORTING_TYPE
     dsd: SDG_DSD.KG_1.7.xml
     import_codes: true
+    drop_singleton_dimensions: false
   - class: InputCsvData
     path_pattern: data/*-*.csv
   - class: InputYamlMdMeta
@@ -90,7 +94,7 @@ indicator_downloads:
     source_pattern: data/*.xml
     indicator_id_pattern: (.*)
     output_folder: data-sdmx
-  
+
 map_layers:
   - geojson_file: oblasts.geojson
     name_property: NAME_1
